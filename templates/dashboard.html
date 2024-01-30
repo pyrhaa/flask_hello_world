@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flask</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ </head>  
+
+<body>
+    <div id="chart_div"></div>
+<script>
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBackgroundColor);
+
+function drawBackgroundColor() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Temp');
+        
+      data.addRows([ [ 1485799200000, 10.61 ], [ 1485810000000, 9.41 ], [ 1485820800000, 9.15 ], [ 1485831600000, 9.12 ], [ 1485842400000, 9.51 ], [ 1485853200000, 9.63 ], [ 1485864000000, 10.19 ], [ 1485874800000, 11.51 ], [ 1485885600000, 10.95 ], [ 1485896400000, 10.06 ], [ 1485907200000, 11.03 ], [ 1485918000000, 11.68 ], [ 1485928800000, 12.55 ], [ 1485939600000, 12.34 ], [ 1485950400000, 12.01 ], [ 1485961200000, 11.01 ], [ 1485972000000, 9.48 ], [ 1485982800000, 8.71 ], [ 1485993600000, 8.83 ], [ 1486004400000, 10.56 ], [ 1486015200000, 11.98 ], [ 1486026000000, 11.61 ], [ 1486036800000, 10.62 ], [ 1486047600000, 10.66 ], [ 1486058400000, 10.64 ], [ 1486069200000, 10.42 ], [ 1486080000000, 10.96 ], [ 1486090800000, 11.88 ], [ 1486101600000, 13.01 ], [ 1486112400000, 12.99 ], [ 1486123200000, 12.8 ], [ 1486134000000, 12.68 ], [ 1486144800000, 12.02 ], [ 1486155600000, 10.67 ], [ 1486166400000, 10.01 ], [ 1486177200000, 10.34 ], [ 1486188000000, 12.11 ], [ 1486198800000, 12.78 ], [ 1486209600000, 12.76 ], [ 1486220400000, 12.36 ] ]);
+
+      var options = {
+        hAxis: {
+          title: 'Date'
+        },
+        vAxis: {
+          title: 'Température'
+        },
+        backgroundColor: '#f1f8e9'
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+
+</script>
+
+</body>
+</html>
