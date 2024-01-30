@@ -11,6 +11,9 @@ def hello_world():
 @app.route("/fr/")
 def monfr():
     return "<h2>Bonjour tout le monde !</h2>"
+@app.route("/exam/")
+def monfr():
+    return "<h2>Je prie pour avoir 10/20 !</h2>"
                                                                                                                                        
 if __name__ == "__main__":
   app.run(debug=True)
